@@ -99,3 +99,20 @@ Pulisher неможе бути використаний напиряму бо ц
 ## Debug
 ## Closures
 ## Enums
+### Questions
+* Як реалізувати rawValue в енама який має асосіетед вельюс?
+    <details><summary>Answer</summary>
+        Потрібно самому реалізувати конструктор init?(rawValue: RawValue) і компютед пропертю var rawValue: RawValue
+    </details>
+* Як зберегти енам в юзер дефолтс?
+    <details><summary>Answer</summary>
+        Якщо енам має асосіейтед вельюс, то потрібно щоб він реалізовував протокол Codable і тоді зберігати його як Data чи Dictionary. Якщо енам немає асосіейтед вельюс то просто зберігати його рав дата.
+    </details>
+* Чому всякі константи типу кольорів, чи подібні речі краще мати як енам ніж структуру?
+    <details><summary>Answer</summary>
+        The advantage of using a case-less enumeration is that it can't accidentally be instantiated and works as a pure namespace.
+    </details>
+* Реалізацією чого є енам з кейсами some i none?
+    <details><summary>Answer</summary>
+        Це раеалізація Optional
+    </details>
