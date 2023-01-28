@@ -30,6 +30,7 @@ The knowledge base for interview preparation.
 * [Debug](https://github.com/Luur/SwiftEchoes-Interview#hard-skills)
 * [Closures](https://github.com/Luur/SwiftEchoes-Interview#hard-skills)
 * [Enums](https://github.com/Luur/SwiftEchoes-Interview#hard-skills)
+* [Git](https://github.com/Luur/SwiftEchoes-Interview#hard-skills)
 
 
 ## General
@@ -120,9 +121,77 @@ Pulisher неможе бути використаний напиряму бо ц
 ## Dispatch method
 ## Generics
 ## Initialization
+### Info
+https://docs.swift.org/swift-book/LanguageGuide/Initialization.html
+### Questions
+* Що таке конвіньєнс конструктор, що зними відбувається при наслідуванні
+    <details><summary>Answer</summary>
+        Відповдь: це конструктор для зручності, він в середині мусить викликати інший ініціалізатор цього класу
+    </details>
+* Приклад реквєд ініт
+    <details><summary>Answer</summary>
+        Відповідь: ініт віз кодер в вюконтролері, або коли реалізовуємо протокол з конструктором в середині
+    </details>
+* чому коли ми обявляємо свій конструктор нас заствляє реалізувати реквєрд конструктор
+    <details><summary>Answer</summary>
+        Відповідь: клас наслідує конструктори свого батька до того моменту поки не обявляє свої конструктори
+    </details>
+* Чому для класу свіфт не може згенерувати нам конструктор, як робить це зі структурою
+    <details><summary>Answer</summary>
+        https://www.hackingwithswift.com/quick-start/understanding-swift/why-dont-swift-classes-have-a-memberwise-initializer
+    </details>
+* три типи конструкторів
+    <details><summary>Answer</summary>
+        Відповідь: рекваєрд, конвініент, дезігнейтед
+    </details>
+* який ланцюг ініціалізації обєкта, чи може конвініанс викликати супер?
+    <details><summary>Answer</summary>
+        Відповідь: конвініанс має виклакти в собі або інший конвініас, або дезігнейте, дезігнейтед має виклаккти супер якшо було наслідування
+    </details>
+* як не втрати в структурі згенерований конструктор, якшо хоч додати кастомний?
+    <details><summary>Answer</summary>
+        Відповідь: перенести кастомний в екстеншн
+    </details>
 ## Persistance
+### Questions
+* Кешування, які є способи кешування
+* які є опції для стореджу і персістенс
+    <details><summary>Answer</summary>
+        є колекції, юзердефолтс, кічейн, запис в фаіл, кордата чи реалм
+    </details>
+* Як зберегти обєкт в юзердефолтс
+    <details><summary>Answer</summary>
+        треба щоб він реалізовував протокол Codable
+    </details>
 ## Debug
+### Questions
+* які інструменти є дебагінга
+    <details><summary>Answer</summary>
+        інструменти, брейкпоінти, асерти, перкондішн, прінти, вю ієархія
+    </details>
+* Які основні тулзи Instruments, для яких задач їх використовувати
+* Як емолювати поганий інтернет
+    <details><summary>Answer</summary>
+        (Network Link Conditioner) та ще інші способи, найти в неті, дрисати
+    </details>
 ## Closures
+### Questions
+* що таке трейлінг кложура
+    <details><summary>Answer</summary>
+        https://www.hackingwithswift.com/sixty/6/5/trailing-closure-syntax
+    </details>
+* чи може функція мати кложуру як тип повертання
+    <details><summary>Answer</summary>
+        може https://www.hackingwithswift.com/sixty/6/10/returning-closures-from-functions
+    </details>
+* Що стається коли кепчер ліст ловить велью значення
+    <details><summary>Answer</summary>
+        Відповді, створює копію яка не змінюється, а якшо захоплює клас, то він уже захоплює це по ссилці і там по іншому працює
+    </details>
+* escaping, nonescaping, autoclosures, кепчурліст і як він працює, якими кложури є по дефолту(нонескейрінг, хоча спочатку були ескайпінг) чому так? чому поміняли?
+    <details><summary>Answer</summary>
+        https://www.hackingwithswift.com/example-code/language/what-is-the-autoclosure-attribute на решту іну треба найти
+    </details>
 ## Enums
 ### Questions
 * Як реалізувати rawValue в енама який має асосіетед вельюс?
@@ -141,3 +210,10 @@ Pulisher неможе бути використаний напиряму бо ц
     <details><summary>Answer</summary>
         Це раеалізація Optional
     </details>
+## Git
+### Questions
+* Що таке git bisect, для чого він використовується?
+    <details><summary>Answer</summary>
+        Бінарний пошук по комітах щоб знайти той в якому баг
+    </details>
+* Ситуація: я працював в гілці А, з неї створив гілку Б, як змерджити з мастер тільки зміни гілки Б?
